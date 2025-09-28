@@ -1,0 +1,18 @@
+{
+    "python.analysis.extraPaths": [
+        "./models"
+    ],
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Local",
+            "database": "bottleneck",
+            "username": "postgres",
+            "password": "Tintswalo@2"
+        }
+    ]
+}

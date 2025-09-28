@@ -1,0 +1,366 @@
+{
+  "scaler": {
+    "mean": [
+      29.567136880129862,
+      4.628059626420356,
+      1.1999999999992272,
+      1.0253412286517027,
+      0.0,
+      37.76633567075748,
+      -17.289375614440203,
+      0.0,
+      0.0
+    ],
+    "std": [
+      5.8151553619999765,
+      0.37198626413547015,
+      1.0,
+      0.03841115527390828,
+      1.0,
+      534.6112919586213,
+      196.04113643530422,
+      1.0,
+      1.0
+    ]
+  },
+  "model_type": "rf",
+  "model": {
+    "type": "rf",
+    "n_trees": 50,
+    "max_depth": 10,
+    "min_samples_split": 8,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "random_state": 42,
+    "classes": [
+      0
+    ],
+    "trees": [
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      },
+      {
+        "leaf": true,
+        "probs": [
+          1.0
+        ]
+      }
+    ],
+    "feature_importances_": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "features": [
+    "agent_age",
+    "agent_rating",
+    "traffic_f",
+    "weather_f",
+    "vehicle_code",
+    "distance_km",
+    "o2p_min",
+    "p2d_min",
+    "total_min"
+  ],
+  "classes": [
+    0
+  ]
+}
