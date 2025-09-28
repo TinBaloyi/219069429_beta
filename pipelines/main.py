@@ -31,7 +31,7 @@ from config import DB_CONFIG
 
 
 try:
-    from pipelines.ml_model import (
+    from ml_model import (
         read_csv as ml_read_csv,
         train_manufacturing,
         train_logistics,
