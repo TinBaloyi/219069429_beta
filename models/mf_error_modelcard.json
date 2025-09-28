@@ -1,0 +1,44 @@
+{
+  "label": "high_error",
+  "threshold": 2.0,
+  "split_sizes": {
+    "train": 80000,
+    "val": 10000,
+    "test": 10000
+  },
+  "metrics": {
+    "val": {
+      "AUC": 0.7733801596811115,
+      "Precision": 0.899164862356944,
+      "Recall": 0.9998853473973859,
+      "F1": 0.9468541338689539
+    },
+    "test": {
+      "AUC": 0.7724834277018356,
+      "Precision": 0.894106718959645,
+      "Recall": 1.0,
+      "F1": 0.9440932868352223
+    }
+  },
+  "features": {
+    "numeric": [
+      "Temperature_C",
+      "Vibration_Hz",
+      "Power_Consumption_kW",
+      "Network_Latency_ms",
+      "Packet_Loss_%",
+      "Predictive_Maintenance_Score",
+      "Quality_Control_Defect_Rate_%"
+    ],
+    "categorical": [
+      "Machine_ID",
+      "Operation_Mode",
+      "Efficiency_Status"
+    ],
+    "time": [
+      "hour",
+      "dow",
+      "month"
+    ]
+  }
+}
