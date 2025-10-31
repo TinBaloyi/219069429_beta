@@ -1,4 +1,6 @@
 
+
+
 class AnalysisParameters:
     def __init__(self, analysis_id, dataset_id, analysis_type, group_by_column, metric_column, sensitivity_threshold=0.8, time_window="24h", modelSelection=None):
         self.analysis_id = analysis_id

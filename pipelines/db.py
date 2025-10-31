@@ -1,27 +1,15 @@
-from config import DB_CONFIG
-import psycopg2
+# pipelines/db.py
+import os
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-def get_connection():
-    """Create and return a new database connection using DB_CONFIG."""
-    return psycopg2.connect(**DB_CONFIG)
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql+psycopg2://postgres:postgres@localhost:5432/bottleneck"
+)
 
-def my_db_function():
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM users;")
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    conn.close()
+engine = create_engine(DATABASE_URL, pool_pre_ping=True, future=True)
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
 
-def add_user(username, email, password_hash, first_name, last_name, role_id):
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO users (username, email, password_hash, first_name, last_name, role_id)
-        VALUES (%s, %s, %s, %s, %s, %s)
-    """, (username, email, password_hash, first_name, last_name, role_id))
-    conn.commit()
-    cur.close()
-    conn.close()
+def get_session():
+    return SessionLocal()

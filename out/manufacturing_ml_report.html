@@ -1,24 +1,202 @@
-<!doctype html><html><head><meta charset='utf-8'><title>ML Report</title></head><body><h1>ML Report — Manufacturing</h1><pre>{
-  "manufacturing": {
-    "model": "rf",
-    "metrics": {
-      "accuracy": 0.9999,
-      "precision": 0.9996,
-      "recall": 1.0,
-      "f1": 0.9998
-    },
-    "feature_importances": [
-      0.5840574494370274,
-      0.06518000155231145,
-      0.0672804086542254,
-      0.05379811335497218,
-      0.04460364753168005,
-      0.04215051781707938,
-      0.045580042113243416,
-      0.0604547074721876,
-      0.03689511206727306,
-      0.0,
-      0.0
-    ]
-  }
-}</pre></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing ML Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .metric {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .feature-tag {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Manufacturing ML Model Report</h1>
+        <p>Generated: 2025-10-31 03:41:40</p>
+    </div>
+
+    <div class="card">
+        <h2>SPEED Model</h2>
+        <h3>Performance Metrics</h3><h4>VAL Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">MAE</div>
+                        <div class="metric-value">105.891</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">R2</div>
+                        <div class="metric-value">0.101</div>
+                    </div>
+                    </div><h4>TEST Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">MAE</div>
+                        <div class="metric-value">105.601</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">R2</div>
+                        <div class="metric-value">0.102</div>
+                    </div>
+                    </div><h3>Features Used</h3><h4>Numeric</h4><div class="features-list"><span class="feature-tag">Temperature_C</span><span class="feature-tag">Vibration_Hz</span><span class="feature-tag">Power_Consumption_kW</span><span class="feature-tag">Network_Latency_ms</span><span class="feature-tag">Packet_Loss_%</span><span class="feature-tag">Predictive_Maintenance_Score</span><span class="feature-tag">Quality_Control_Defect_Rate_%</span></div><h4>Categorical</h4><div class="features-list"><span class="feature-tag">Machine_ID</span><span class="feature-tag">Operation_Mode</span><span class="feature-tag">Efficiency_Status</span></div><h4>Time</h4><div class="features-list"><span class="feature-tag">hour</span><span class="feature-tag">dow</span><span class="feature-tag">month</span></div><h3>Dataset Splits</h3><div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">train</div>
+                    <div class="metric-value">80,000</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">val</div>
+                    <div class="metric-value">10,000</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">test</div>
+                    <div class="metric-value">10,000</div>
+                </div>
+                </div></div>
+    <div class="card">
+        <h2>ERROR Model</h2>
+        <h3>Performance Metrics</h3><h4>VAL Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">AUC</div>
+                        <div class="metric-value">0.773</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Precision</div>
+                        <div class="metric-value">0.899</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Recall</div>
+                        <div class="metric-value">1.000</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">F1</div>
+                        <div class="metric-value">0.947</div>
+                    </div>
+                    </div><h4>TEST Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">AUC</div>
+                        <div class="metric-value">0.772</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Precision</div>
+                        <div class="metric-value">0.894</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Recall</div>
+                        <div class="metric-value">1.000</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">F1</div>
+                        <div class="metric-value">0.944</div>
+                    </div>
+                    </div><h3>Features Used</h3><h4>Numeric</h4><div class="features-list"><span class="feature-tag">Temperature_C</span><span class="feature-tag">Vibration_Hz</span><span class="feature-tag">Power_Consumption_kW</span><span class="feature-tag">Network_Latency_ms</span><span class="feature-tag">Packet_Loss_%</span><span class="feature-tag">Predictive_Maintenance_Score</span><span class="feature-tag">Quality_Control_Defect_Rate_%</span></div><h4>Categorical</h4><div class="features-list"><span class="feature-tag">Machine_ID</span><span class="feature-tag">Operation_Mode</span><span class="feature-tag">Efficiency_Status</span></div><h4>Time</h4><div class="features-list"><span class="feature-tag">hour</span><span class="feature-tag">dow</span><span class="feature-tag">month</span></div><h3>Dataset Splits</h3><div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">train</div>
+                    <div class="metric-value">80,000</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">val</div>
+                    <div class="metric-value">10,000</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">test</div>
+                    <div class="metric-value">10,000</div>
+                </div>
+                </div></div>
+    <div class="card">
+        <h2>Sample Predictions</h2>
+        <table>
+            <thead>
+                <tr>
+<th>Timestamp</th><th>Machine_ID</th><th>Operation_Mode</th><th>Temperature_C</th><th>Vibration_Hz</th><th>Power_Consumption_kW</th><th>Network_Latency_ms</th><th>Packet_Loss_%</th>
+                </tr>
+            </thead>
+            <tbody>
+<tr><td>2024-01-01T00:00:00</td><td>39</td><td>Idle</td><td>74.138</td><td>3.501</td><td>8.612</td><td>10.651</td><td>0.208</td></tr><tr><td>2024-01-01T00:01:00</td><td>29</td><td>Active</td><td>84.265</td><td>3.356</td><td>2.269</td><td>29.112</td><td>2.228</td></tr><tr><td>2024-01-01T00:02:00</td><td>15</td><td>Active</td><td>44.280</td><td>2.080</td><td>6.144</td><td>18.357</td><td>1.639</td></tr><tr><td>2024-01-01T00:03:00</td><td>43</td><td>Active</td><td>40.569</td><td>0.298</td><td>4.068</td><td>29.154</td><td>1.161</td></tr><tr><td>2024-01-01T00:04:00</td><td>8</td><td>Idle</td><td>75.064</td><td>0.346</td><td>6.226</td><td>34.029</td><td>4.797</td></tr><tr><td>2024-01-01T00:05:00</td><td>21</td><td>Active</td><td>80.960</td><td>1.386</td><td>9.868</td><td>48.399</td><td>0.575</td></tr><tr><td>2024-01-01T00:06:00</td><td>39</td><td>Active</td><td>76.435</td><td>4.815</td><td>2.617</td><td>23.517</td><td>2.089</td></tr><tr><td>2024-01-01T00:07:00</td><td>19</td><td>Active</td><td>37.670</td><td>4.437</td><td>7.659</td><td>35.451</td><td>3.258</td></tr><tr><td>2024-01-01T00:08:00</td><td>23</td><td>Active</td><td>75.547</td><td>3.128</td><td>2.679</td><td>43.648</td><td>2.884</td></tr><tr><td>2024-01-01T00:09:00</td><td>11</td><td>Active</td><td>56.325</td><td>0.648</td><td>3.402</td><td>23.986</td><td>0.564</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,22 +1,202 @@
-<!doctype html><html><head><meta charset='utf-8'><title>ML Report</title></head><body><h1>ML Report — Logistics</h1><pre>{
-  "logistics": {
-    "model": "rf",
-    "metrics": {
-      "accuracy": 1.0,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0
-    },
-    "feature_importances": [
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-    ]
-  }
-}</pre></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics ML Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .metric {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .feature-tag {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Logistics ML Model Report</h1>
+        <p>Generated: 2025-10-31 03:53:17</p>
+    </div>
+
+    <div class="card">
+        <h2>ETA Model</h2>
+        <h3>Performance Metrics</h3><h4>VAL Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">MAE</div>
+                        <div class="metric-value">3.701</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">R2</div>
+                        <div class="metric-value">-0.010</div>
+                    </div>
+                    </div><h4>TEST Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">MAE</div>
+                        <div class="metric-value">3.742</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">R2</div>
+                        <div class="metric-value">-0.010</div>
+                    </div>
+                    </div><h3>Features Used</h3><h4>Numeric</h4><div class="features-list"><span class="feature-tag">fuel_consumption_rate</span><span class="feature-tag">eta_variation_hours</span><span class="feature-tag">traffic_congestion_level</span><span class="feature-tag">warehouse_inventory_level</span><span class="feature-tag">loading_unloading_time</span><span class="feature-tag">handling_equipment_availability</span><span class="feature-tag">shipping_costs</span><span class="feature-tag">lead_time_days</span><span class="feature-tag">iot_temperature</span><span class="feature-tag">driver_behavior_score</span><span class="feature-tag">fatigue_monitoring_score</span><span class="feature-tag">delay_probability</span><span class="feature-tag">port_congestion_level</span><span class="feature-tag">vehicle_gps_latitude</span><span class="feature-tag">vehicle_gps_longitude</span><span class="feature-tag">order_fulfillment_status</span><span class="feature-tag">weather_condition_severity</span><span class="feature-tag">supplier_reliability_score</span></div><h4>Categorical</h4><div class="features-list"><span class="feature-tag">risk_classification</span></div><h4>Time</h4><div class="features-list"><span class="feature-tag">hour</span><span class="feature-tag">dow</span><span class="feature-tag">month</span></div><h3>Dataset Splits</h3><div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">train</div>
+                    <div class="metric-value">25,652</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">val</div>
+                    <div class="metric-value">3,206</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">test</div>
+                    <div class="metric-value">3,207</div>
+                </div>
+                </div></div>
+    <div class="card">
+        <h2>DELAY Model</h2>
+        <h3>Performance Metrics</h3><h4>VAL Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">AUC</div>
+                        <div class="metric-value">0.505</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Precision</div>
+                        <div class="metric-value">0.250</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Recall</div>
+                        <div class="metric-value">0.001</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">F1</div>
+                        <div class="metric-value">0.003</div>
+                    </div>
+                    </div><h4>TEST Set</h4><div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-label">AUC</div>
+                        <div class="metric-value">0.503</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Precision</div>
+                        <div class="metric-value">0.000</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Recall</div>
+                        <div class="metric-value">0.000</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">F1</div>
+                        <div class="metric-value">0.000</div>
+                    </div>
+                    </div><h3>Features Used</h3><h4>Numeric</h4><div class="features-list"><span class="feature-tag">fuel_consumption_rate</span><span class="feature-tag">eta_variation_hours</span><span class="feature-tag">traffic_congestion_level</span><span class="feature-tag">warehouse_inventory_level</span><span class="feature-tag">loading_unloading_time</span><span class="feature-tag">handling_equipment_availability</span><span class="feature-tag">shipping_costs</span><span class="feature-tag">lead_time_days</span><span class="feature-tag">iot_temperature</span><span class="feature-tag">driver_behavior_score</span><span class="feature-tag">fatigue_monitoring_score</span><span class="feature-tag">delay_probability</span><span class="feature-tag">port_congestion_level</span><span class="feature-tag">vehicle_gps_latitude</span><span class="feature-tag">vehicle_gps_longitude</span><span class="feature-tag">order_fulfillment_status</span><span class="feature-tag">weather_condition_severity</span><span class="feature-tag">supplier_reliability_score</span></div><h4>Categorical</h4><div class="features-list"><span class="feature-tag">risk_classification</span></div><h4>Time</h4><div class="features-list"><span class="feature-tag">hour</span><span class="feature-tag">dow</span><span class="feature-tag">month</span></div><h3>Dataset Splits</h3><div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">train</div>
+                    <div class="metric-value">25,652</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">val</div>
+                    <div class="metric-value">3,206</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">test</div>
+                    <div class="metric-value">3,207</div>
+                </div>
+                </div></div>
+    <div class="card">
+        <h2>Sample Predictions</h2>
+        <table>
+            <thead>
+                <tr>
+<th>timestamp</th><th>vehicle_gps_latitude</th><th>vehicle_gps_longitude</th><th>fuel_consumption_rate</th><th>eta_variation_hours</th><th>traffic_congestion_level</th><th>warehouse_inventory_level</th><th>loading_unloading_time</th>
+                </tr>
+            </thead>
+            <tbody>
+<tr><td>2021-01-01 00:00:00</td><td>40.376</td><td>-77.014</td><td>5.137</td><td>4.998</td><td>5.928</td><td>985.717</td><td>4.951</td></tr><tr><td>2021-01-01 01:00:00</td><td>33.508</td><td>-117.037</td><td>5.102</td><td>0.985</td><td>1.592</td><td>396.700</td><td>1.030</td></tr><tr><td>2021-01-01 02:00:00</td><td>30.021</td><td>-75.269</td><td>5.091</td><td>4.973</td><td>8.788</td><td>832.409</td><td>4.220</td></tr><tr><td>2021-01-01 03:00:00</td><td>36.649</td><td>-70.191</td><td>8.220</td><td>3.095</td><td>0.045</td><td>0.573</td><td>0.530</td></tr><tr><td>2021-01-01 04:00:00</td><td>30.001</td><td>-70.012</td><td>5.000</td><td>3.216</td><td>8.005</td><td>914.925</td><td>3.621</td></tr><tr><td>2021-01-01 05:00:00</td><td>47.865</td><td>-119.998</td><td>5.534</td><td>4.862</td><td>0.499</td><td>822.591</td><td>0.769</td></tr><tr><td>2021-01-01 06:00:00</td><td>33.846</td><td>-95.940</td><td>5.780</td><td>5.000</td><td>8.751</td><td>6.048</td><td>3.924</td></tr><tr><td>2021-01-01 07:00:00</td><td>32.602</td><td>-102.317</td><td>5.475</td><td>0.376</td><td>4.813</td><td>256.293</td><td>2.353</td></tr><tr><td>2021-01-01 08:00:00</td><td>39.787</td><td>-90.898</td><td>5.681</td><td>4.959</td><td>9.613</td><td>109.817</td><td>0.592</td></tr><tr><td>2021-01-01 09:00:00</td><td>47.728</td><td>-113.414</td><td>5.088</td><td>1.509</td><td>9.897</td><td>0.032</td><td>0.781</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

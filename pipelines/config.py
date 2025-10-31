@@ -1,6 +1,6 @@
 # config.py
 DB_CONFIG = {
-    "dbname": "bottleneck_db",   
+    "dbname": "bottleneck",   
     "user": "postgres",          
     "password": "Tintswalo@2",  
     "host": "localhost",         
